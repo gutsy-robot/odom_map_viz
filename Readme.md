@@ -1,6 +1,10 @@
 This package helps to visualise the odometry published by gps and vo on a open street map. 
 
-Make sure that you opencv and opengl before using this. To use the package, clone it in your catkin workspace and do a catkin_make or catkin build and then source it. 
+Make sure that you opencv and opengl before using this. Also install this:
+
+	sudo apt-get install ros-indigo-geodesy
+
+To use the package, clone it in your catkin workspace and do a catkin_make or catkin build and then source it. 
 
 Then do a: 	
 
