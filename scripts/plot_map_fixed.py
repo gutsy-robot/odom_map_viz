@@ -19,7 +19,8 @@ from std_msgs.msg import String
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import NavSatFix
 import math
-
+import os
+import rospkg
 
 class MapViz(object):
     def __init__(self):
@@ -39,7 +40,8 @@ class MapViz(object):
         self.p_initial = geodesy.utm.fromLatLong(self.initial_lat,self.initial_long).toPoint()
 
         #give the path to map file.
-        self.map_file_path = '/home/siddharth/map_file.jpg'
+        rp = rospkg.RosPack()
+        self.map_file_path = os.path.join(rp.get_path('odom_visualizer'), 'resources', 'map_file.jpg')
         #load it as an opencv image 
         self.map_img = cv2.imread(self.map_file_path,cv2.IMREAD_COLOR)
         print self.map_img.shape
