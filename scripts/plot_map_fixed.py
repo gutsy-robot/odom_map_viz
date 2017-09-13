@@ -52,7 +52,7 @@ class MapViz(object):
         #opencv window declaration.
         self.cv_window = cv2.namedWindow("MapDisplay",0)
 
-        rospy.sleep(8)
+        rospy.sleep(19)
         rospy.loginfo("all objects for map visualization initialised...")
 
 
